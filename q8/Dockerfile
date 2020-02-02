@@ -10,7 +10,9 @@ COPY ./ ./
 # Build all docker releases.
 RUN apk add git && \
     git clone https://gitlab.com/Elypia/imagecaster.git imagecaster && \
-    cd imagecaster/src/ImageCaster/ && \
+    cd imagecaster/ && \
+    git checkout -b build 0.1.9 && \
+    cd src/ImageCaster/ && \
     dotnet publish -c Release-Q8 -r linux-x64 --self-contained false
 
 # Start building our final image.
@@ -28,4 +30,4 @@ USER imagecaster
 
 WORKDIR /home/imagecaster
 
-COPY --from=build /home/dev/imagecaster/src/ImageCaster/bin/Release-*/netcoreapp3.1/linux-x64/publish/* /usr/local/bin/
+COPY --from=build /home/dev/imagecaster/src/ImageCaster/bin/Release-Q*/netcoreapp3.1/linux-x64/publish/* /usr/local/bin/
