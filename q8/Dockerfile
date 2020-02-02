@@ -10,7 +10,7 @@ WORKDIR /home/dev/
 # Copy source-code over to our container.
 COPY ./ ./
 
-# Build all docker releases.
+# Setup and Build ImageCaster
 RUN apk add git && \
     git clone https://gitlab.com/Elypia/imagecaster.git imagecaster && \
     cd imagecaster/ && \
