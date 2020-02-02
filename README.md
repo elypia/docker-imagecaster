@@ -22,10 +22,6 @@ While not legal advice, you can find a [TL;DR] that sums up what
 you're allowed and not allowed to do along with any requirements if you
 want to use or derive work from this source code!  
 
-**All non-code files including videos, models, audio, bitmaps, vectors, and 
-animations such as GIFs, are not under the aforementioned license; all rights
-are reserved by Elypia CIC.** 
-
 [q16-hdri]: https://gitlab.com/Elypia/docker-imagecaster/blob/master/q16-hdri/Dockerfile "Dockerfile for Q16-HDRI Builds"
 [q16]: https://gitlab.com/Elypia/docker-imagecaster/blob/master/q16/Dockerfile "Dockerfile for Q16 Builds"
 [q8]: https://gitlab.com/Elypia/docker-imagecaster/blob/master/q8/Dockerfile "Dockerfile for Q8 Builds"
