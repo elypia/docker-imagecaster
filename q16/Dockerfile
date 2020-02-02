@@ -1,6 +1,9 @@
 # Build all files for deployment.
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1.101-alpine3.10 AS build
 
+# The tag in the ImageCaster repository to checkout.
+ARG TAG="0.1.9"
+
 # We'll move builds from here to the next image.
 WORKDIR /home/dev/
 
@@ -11,7 +14,7 @@ COPY ./ ./
 RUN apk add git && \
     git clone https://gitlab.com/Elypia/imagecaster.git imagecaster && \
     cd imagecaster/ && \
-    git checkout -b build 0.1.9 && \
+    git checkout -b build ${TAG} && \
     cd src/ImageCaster/ && \
     dotnet publish -c Release-Q16 -r linux-x64 --self-contained false
 
