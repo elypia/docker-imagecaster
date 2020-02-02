@@ -7,13 +7,9 @@ ARG TAG="0.1.9"
 # We'll move builds from here to the next image.
 WORKDIR /home/dev/
 
-# Copy source-code over to our container.
-COPY ./ ./
-
 # Setup and Build ImageCaster
 RUN apk add git && \
-    git clone https://gitlab.com/Elypia/imagecaster.git imagecaster && \
-    cd imagecaster/ && \
+    git clone https://gitlab.com/Elypia/imagecaster.git . && \
     git checkout -b build ${TAG} && \
     cd src/ImageCaster/ && \
     dotnet publish -c Release-Q8 -r linux-x64 --self-contained false
