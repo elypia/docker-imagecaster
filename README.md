@@ -1,4 +1,4 @@
-# ImageCaster for Docker [![matrix-members]][matrix] [![discord-members]][discord] [![docker-shield]][docker] [![gitlab-build]][gitlab] [![gitlab-coverage]][gitlab] [![donate-shield]][elypia-donate]
+# ImageCaster for Docker [![matrix-members]][matrix] [![discord-members]][discord] [![docker-shield]][docker] [![gitlab-build]][gitlab] [![donate-shield]][elypia-donate]
 ## Docker Images
 There are 3 deployments of ImageCaster, each corresponding to builds of
 ImageMagick: Q16-HDRI, Q16, and Q8. By not specifying which you'll use
@@ -42,5 +42,4 @@ are reserved by Elypia CIC.**
 [discord-members]: https://discordapp.com/api/guilds/184657525990359041/widget.png "Discord Shield"
 [docker-shield]: https://img.shields.io/docker/pulls/elypia/imagecaster?logo=docker "Docker Shield"
 [gitlab-build]: https://gitlab.com/Elypia/docker-imagecaster/badges/master/pipeline.svg "GitLab Build Shield"
-[gitlab-coverage]: https://gitlab.com/Elypia/docker-imagecaster/badges/master/coverage.svg "GitLab Coverage Shield"
 [donate-shield]: https://img.shields.io/badge/Elypia-Donate-blueviolet "Donate Shield"
