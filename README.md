@@ -1,4 +1,4 @@
-# ImageCaster for Docker [![matrix-members]][matrix] [![discord-members]][discord] [![docker-shield]][docker] [![donate-shield]][elypia-donate]
+# ImageCaster for Docker [![matrix-members]][matrix] [![discord-members]][discord] [![docker-shield]][docker] [![gitlab-build]][gitlab] [![gitlab-coverage]][gitlab] [![donate-shield]][elypia-donate]
 ## Docker Images
 There are 3 deployments of ImageCaster, each corresponding to builds of
 ImageMagick: Q16-HDRI, Q16, and Q8. By not specifying which you'll use
@@ -33,6 +33,7 @@ are reserved by Elypia CIC.**
 [matrix]: https://matrix.to/#/+elypia:matrix.org "Matrix Invite"
 [discord]: https://discordapp.com/invite/hprGMaM "Discord Invite"
 [docker]: https://hub.docker.com/r/elypia/imagecaster "ImageCaster on Docker"
+[gitlab]: https://gitlab.com/Elypia/docker-imagecaster/commits/master "Repository on GitLab"
 [elypia-donate]: https://elypia.org/donate "Donate to Elypia"
 [GNU General Public License]: https://www.gnu.org/licenses/gpl-3.0.en.html "GPL"
 [TL;DR]: https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3) "TL;DR of GPL"
@@ -40,4 +41,6 @@ are reserved by Elypia CIC.**
 [matrix-members]: https://img.shields.io/matrix/elypia-general:matrix.org?logo=matrix "Matrix Shield"
 [discord-members]: https://discordapp.com/api/guilds/184657525990359041/widget.png "Discord Shield"
 [docker-shield]: https://img.shields.io/docker/pulls/elypia/imagecaster?logo=docker "Docker Shield"
+[gitlab-build]: https://gitlab.com/Elypia/docker-imagecaster/badges/master/pipeline.svg "GitLab Build Shield"
+[gitlab-coverage]: https://gitlab.com/Elypia/docker-imagecaster/badges/master/coverage.svg "GitLab Coverage Shield"
 [donate-shield]: https://img.shields.io/badge/Elypia-Donate-blueviolet "Donate Shield"

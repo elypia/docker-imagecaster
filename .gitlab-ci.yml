@@ -1,0 +1,22 @@
+image: docker:19.03.5
+
+services:
+  - docker:19.03.5-dind
+
+# We don't have to cache anything this pipeline.
+cache: {}
+
+build-q16-hdri:
+  stage: build
+  script:
+    - docker build -t elypia/imagecaster:q16-hdri -f q16-hdri/Dockerfile .
+
+build-q16:
+  stage: build
+  script:
+    - docker build -t elypia/imagecaster:q16 -f q16/Dockerfile .
+
+build-q8:
+  stage: build
+  script:
+    - docker build -t elypia/imagecaster:q8 -f q8/Dockerfile .
