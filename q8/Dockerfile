@@ -10,7 +10,7 @@ COPY ./ ./
 # Build all docker releases.
 RUN apk add git && \
     git clone https://github.com/Elypia/ImageCaster.git && \
-    git checkout -b build 0.1.8 && \
+    git checkout -b build 0.1.9 && \
     cd src/ImageCaster/ && \
     dotnet publish -c Release-Q8 -r linux-x64 --self-contained false
 
