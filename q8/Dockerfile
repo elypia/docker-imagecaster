@@ -8,11 +8,13 @@ ARG TAG="0.1.9"
 WORKDIR /home/dev/
 
 # Setup and Build ImageCaster
-RUN apk add git && \
+RUN echo "Installing git, cloning ImageCaster, and checking out ${TAG}" && \
+    apk add git && \
     git clone https://gitlab.com/Elypia/imagecaster.git . && \
     git checkout -b build ${TAG} && \
     cd src/ImageCaster/ && \
-    dotnet publish -c Release-Q8 -r linux-x64 --self-contained false
+    echo "Build release version of ImageCaster for Docker environment" && \
+    dotnet publish --configuration Release-Q8 --runtime linux-x64 --self-contained false
 
 # Start building our final image.
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1.1-bionic
@@ -20,11 +22,13 @@ FROM mcr.microsoft.com/dotnet/core/runtime:3.1.1-bionic
 LABEL maintainer="seth@elypia.org"
 
 # Add imagecaster user, and install a generic open font.
-RUN groupadd -rg 1000 imagecaster && \
-    useradd -rmg imagecaster -u 1000 -s /bin/bash imagecaster && \
+RUN echo "Adding imagecaster system group and user" && \
+    groupadd --system --gid 1000 imagecaster && \
+    useradd --system --create-home --gid imagecaster --uid 1000 --shell /bin/bash imagecaster && \
+    echo "Install generic open font and clear apt cache" && \
     apt-get update && \
     apt-get install -y ttf-dejavu && \
-    rm -rf /var/lib/apt/lists/*
+    rm --recursive --force /var/lib/apt/lists/*
 
 USER imagecaster
 
