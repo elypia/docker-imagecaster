@@ -12,7 +12,7 @@ RUN apk add git && \
     git clone https://github.com/Elypia/ImageCaster.git && \
     git checkout -b build 0.1.8 && \
     cd src/ImageCaster/ && \
-    dotnet publish -c Release-Q8-Docker
+    dotnet publish -c Release-Q8 -r linux-x64 --self-contained false
 
 # Start building our final image.
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1.1-bionic
