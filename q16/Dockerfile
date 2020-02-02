@@ -20,7 +20,8 @@ FROM mcr.microsoft.com/dotnet/core/runtime:3.1.1-bionic
 LABEL maintainer="seth@elypia.org"
 
 # Add imagecaster user, and install a generic open font.
-RUN useradd -ms /bin/bash imagecaster && \
+RUN groupadd -rg 1000 imagecaster && \
+    useradd -rmg imagecaster -u 1000 -s /bin/bash imagecaster && \
     apt-get update && \
     apt-get install -y ttf-dejavu && \
     rm -rf /var/lib/apt/lists/*
