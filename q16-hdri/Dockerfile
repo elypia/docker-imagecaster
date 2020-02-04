@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1.101-alpine3.10 AS build
 
 # The tag in the ImageCaster repository to checkout.
-ARG TAG="0.2.0"
+ARG TAG="0.2.1"
 
 # We'll move builds from here to the next image.
 WORKDIR /home/dev/
