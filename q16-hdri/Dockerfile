@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1.101-alpine3.10 AS build
 
 # The tag in the ImageCaster repository to checkout.
-ARG TAG="0.2.2"
+ARG TAG="0.3.0"
 
 # We'll move builds from here to the next image.
 WORKDIR /home/dev/
@@ -12,9 +12,9 @@ RUN echo "Installing git, cloning ImageCaster, and checking out ${TAG}" && \
     apk add git && \
     git clone https://gitlab.com/Elypia/imagecaster.git . && \
     git checkout -b build ${TAG} && \
-    cd src/ImageCaster/ && \
+    cd src/ && \
     echo "Build release version of ImageCaster for Docker environment" && \
-    dotnet publish --configuration Release-Q16-HDRI --runtime linux-x64 --self-contained false
+    dotnet publish --configuration Release-Q16-HDRI --runtime linux-x64 --self-contained false ImageCasterCli
 
 # Start building our final image.
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1.1-bionic
@@ -34,4 +34,4 @@ USER imagecaster
 
 WORKDIR /home/imagecaster
 
-COPY --from=build /home/dev/src/ImageCaster/bin/Release-Q*/netcoreapp3.1/linux-x64/publish/* /usr/local/bin/
+COPY --from=build /home/dev/src/ImageCasterCli/bin/Release-Q*/netcoreapp3.1/linux-x64/publish/* /usr/local/bin/

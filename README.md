@@ -17,7 +17,7 @@ repository that has a set of images as a source and programmatically
 produces images as a result of a build.
 
 ## Open-Source
-This project is open-source under the [GNU General Public License]!  
+This project is open-source under the [Apache 2.0]!  
 While not legal advice, you can find a [TL;DR] that sums up what
 you're allowed and not allowed to do along with any requirements if you
 want to use or derive work from this source code!  
@@ -31,8 +31,8 @@ want to use or derive work from this source code!
 [docker]: https://hub.docker.com/r/elypia/imagecaster "ImageCaster on Docker"
 [gitlab]: https://gitlab.com/Elypia/docker-imagecaster/commits/master "Repository on GitLab"
 [elypia-donate]: https://elypia.org/donate "Donate to Elypia"
-[GNU General Public License]: https://www.gnu.org/licenses/gpl-3.0.en.html "GPL"
-[TL;DR]: https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3) "TL;DR of GPL"
+[Apache 2.0]: https://www.apache.org/licenses/LICENSE-2.0 "Apache 2.0 License"
+[TL;DR]: https://tldrlegal.com/license/apache-license-2.0-(apache-2.0) "TL;DR of Apache 2.0"
 
 [matrix-members]: https://img.shields.io/matrix/elypia-general:matrix.org?logo=matrix "Matrix Shield"
 [discord-members]: https://discordapp.com/api/guilds/184657525990359041/widget.png "Discord Shield"
