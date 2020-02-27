@@ -28,7 +28,7 @@ want to use or derive work from this source code!
 
 [matrix-community]: https://matrix.to/#/+elypia:matrix.org "Matrix Invite"
 [discord-guild]: https://discordapp.com/invite/hprGMaM "Discord Invite"
-[docker-images]: https://hub.docker.com/r/elypia/imagecaster "ImageCaster on Docker"
+[docker-image]: https://hub.docker.com/r/elypia/imagecaster "ImageCaster on Docker"
 [gitlab]: https://gitlab.com/Elypia/docker-imagecaster/commits/master "Repository on GitLab"
 [elypia-donate]: https://elypia.org/donate "Donate to Elypia"
 [Apache 2.0]: https://www.apache.org/licenses/LICENSE-2.0 "Apache 2.0 License"
