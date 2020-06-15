@@ -38,4 +38,4 @@ want to use or derive work from this source code!
 [Discord]: https://discordapp.com/api/guilds/184657525990359041/widget.png "Discord Shield"
 [Docker]: https://img.shields.io/docker/pulls/elypia/imagecaster?logo=docker "Docker Shield"
 [Build]: https://gitlab.com/Elypia/docker-imagecaster/badges/master/pipeline.svg "GitLab Build Shield"
-[Donate]: https://img.shields.io/badge/Elypia-Donate-blueviolet "Donate Shield"
+[Donate]: https://img.shields.io/badge/elypia-donate-blueviolet "Donate Shield"
